@@ -18,7 +18,7 @@ definitions = {
     'OBJECT': ('''Any data with state (attributes or value) and defined behavior (methods). Also the ultimate base class of any new-style class.''', '''https://docs.python.org/3.3/glossary.html#term-parameter'''),
     'SLICE': ('''An object usually containing a portion of a sequence. A slice is created using the subscript notation, [] with colons between numbers when several are given, such as in variable_name[1:3:5]. The bracket (subscript) notation uses slice objects internally.''', '''https://docs.python.org/3.3/glossary.html#term-parameter''')
 }
-
+'''
 with open('storage.csv', "w") as csvfile:
     writer = csv.writer(csvfile)
 
@@ -26,7 +26,7 @@ with open('storage.csv', "w") as csvfile:
         writer.writerow([key, value])
     csvfile.close()
 
-'''
+
 with open('storage.csv') as csvfile:
         reader = csv.reader(csvfile)
         definitions_main = dict(reader)
