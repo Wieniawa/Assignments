@@ -46,8 +46,9 @@ def option_two():
             print (R+'New definition added !')
 
 def option_three(dictionary_main):
-    a= (sorted(dictionary_main))
-    print (*a)
+    sorted_dict = (sorted(dictionary_main))
+    for key in sorted_dict:
+        print (R+key)
 
 def option_four(dictionary_main):
     letter = input('Type a letter: ').upper()
