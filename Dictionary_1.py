@@ -27,7 +27,7 @@ def option_one(dictionary_main):
     appellation = input('Choose a word: ').upper()
     if appellation in dictionary_main.keys():
         tuple_divide = dictionary_main[appellation].split("', '")
-        print (R+tuple_divide[0][1:]+'\n'+tuple_divide[1][:-1])
+        print (R+tuple_divide[0][2:]+'\n'+tuple_divide[1][:-2])
     else:
         print(R+'Don\'t find appellation !')
 
