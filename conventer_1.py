@@ -28,10 +28,10 @@ def decimal_to_binary(number):
     print(" |",result,"|  2 |")
     print(" \ "+linia+"------/ ")
 
-def kaka(binary):
+def binary_validation(binary):
     binary_sum = 0
-    for x in binary:
-        binary_sum += int(x)
+    for number in binary:
+        binary_sum += int(number)
     if len(binary) >= binary_sum:
         binary_to_decimal(binary)
     else:
@@ -46,7 +46,7 @@ def main():
             system = split_numbers[1]
             binary = str(number)
             if system == '2':
-                kaka(binary)
+                binary_validation(binary)
             elif system == '10':
                 decimal_to_binary(number)
             else:
