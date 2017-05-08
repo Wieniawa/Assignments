@@ -1,21 +1,25 @@
+import sys
+
 def binary_to_decimal(binary):
     decimal = 0
+    if binary == '1':
+        decimal = 1
     while len(binary) > 1:
-        licznik = 1
+        counter = 1
         for sign in binary:
-            licznik *= 2
-        decimal += licznik / 2
+            counter *= 2
+        decimal += counter / 2
         if binary[0] == '1':
             binary = binary[1:]
-        if binary[0] == '0':
-            binary = binary[1:]
+            binary = binary.lstrip('0')
         if len(binary) == 1:
             if binary[-1] == '1':
                 decimal += 1
-    linia = '-'*(len(str(decimal)))
-    print(" /"+linia+"-------\ ")
-    print(" |",int(decimal),"|  10  |")
-    print(" \ "+linia+"------/ ")
+
+    line = '-'*(len(str(decimal)))
+    print(" /"+line+"-----\ ")
+    print(" |",int(decimal),"| 10 |")
+    print(" \ "+line+"----/ ")
 
 
 def decimal_to_binary(number):
@@ -23,16 +27,18 @@ def decimal_to_binary(number):
     while number > 0:
         result = str(number % 2) + result
         number = number // 2
-    linia = '-'*(len(result))
-    print(" /"+linia+"-------\ ")
+
+    line = '-'*(len(result))
+    print(" /"+line+"-------\ ")
     print(" |",result,"|  2 |")
-    print(" \ "+linia+"------/ ")
+    print(" \ "+line+"------/ ")
+
 
 def binary_validation(binary):
     for number in binary:
         if number != '0' and number != '1':
             print("Use only '1' or '0' !")
-            main()
+            sys.exit()
     binary_to_decimal(binary)
 
 
