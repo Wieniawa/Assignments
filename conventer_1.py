@@ -29,13 +29,12 @@ def decimal_to_binary(number):
     print(" \ "+linia+"------/ ")
 
 def binary_validation(binary):
-    binary_sum = 0
     for number in binary:
-        binary_sum += int(number)
-    if len(binary) >= binary_sum:
-        binary_to_decimal(binary)
-    else:
-        print("Use only '1' or '0' !")
+        if number != '0' and number != '1':
+            print("Use only '1' or '0' !")
+            main()
+    binary_to_decimal(binary)
+
 
 def main():
     while True:
