@@ -2,8 +2,6 @@ import sys
 
 def binary_to_decimal(binary):
     decimal = 0
-    if binary == '1':
-        decimal = 1
     while len(binary) > 1:
         counter = 1
         for sign in binary:
@@ -35,11 +33,10 @@ def decimal_to_binary(number):
 
 
 def binary_validation(binary):
-    for number in binary:
-        if number != '0' and number != '1':
-            print("Use only '1' or '0' !")
-            sys.exit()
-    binary_to_decimal(binary)
+    if all(i == '0' or i =='1' for i in binary):
+        binary_to_decimal(binary)
+    else:
+        print("Use only '1' or '0' !")
 
 
 def main():
