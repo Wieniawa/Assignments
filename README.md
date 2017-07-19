@@ -4,3 +4,4 @@ Cytat:
 ```
 block
 ```
+link for [allegro](www.allegro.pl)
